@@ -1507,25 +1507,25 @@ button:focus-visible,
 }
 
 .home-page .hero-icons .object-campaign {
-  width: clamp(180px, 14vw, 220px);
+  width: clamp(205px, 16vw, 250px);
   top: 7%;
   left: -3vw;
 }
 
 .home-page .hero-icons .object-search {
-  width: clamp(180px, 14vw, 220px);
+  width: clamp(205px, 16vw, 250px);
   top: 8%;
   right: -3vw;
 }
 
 .home-page .hero-icons .object-target {
-  width: clamp(90px, 7vw, 108px);
+  width: clamp(104px, 8vw, 122px);
   top: 14%;
   left: 15vw;
 }
 
 .home-page .hero-icons .object-profile {
-  width: clamp(96px, 7.4vw, 114px);
+  width: clamp(110px, 8.4vw, 128px);
   top: 35%;
   left: auto;
   right: 15vw;
@@ -1533,25 +1533,25 @@ button:focus-visible,
 }
 
 .home-page .hero-icons .object-social {
-  width: clamp(100px, 7.4vw, 114px);
+  width: clamp(114px, 8.5vw, 130px);
   top: 54%;
   left: 2vw;
 }
 
 .home-page .hero-icons .object-analytics {
-  width: clamp(136px, 10vw, 154px);
+  width: clamp(152px, 11.4vw, 174px);
   top: 55%;
   right: -1vw;
 }
 
 .home-page .hero-icons .object-lightbulb {
-  width: clamp(88px, 6.5vw, 100px);
+  width: clamp(100px, 7.4vw, 114px);
   top: 69%;
   right: 15vw;
 }
 
 .home-page .hero-icons .object-shopping {
-  width: clamp(100px, 7.4vw, 114px);
+  width: clamp(114px, 8.5vw, 130px);
   top: 78%;
   left: 14vw;
   right: auto;
@@ -1560,12 +1560,12 @@ button:focus-visible,
 
 @media (max-width: 980px) {
   .home-page .hero-message { width: 68vw; }
-  .home-page .hero-icons .object-campaign { width: 138px; top: 5%; left: -36px; }
-  .home-page .hero-icons .object-search { width: 138px; top: 6%; right: -36px; }
-  .home-page .hero-icons .object-target { width: 76px; top: 26%; left: 4vw; }
-  .home-page .hero-icons .object-profile { width: 80px; top: 29%; right: 4vw; }
-  .home-page .hero-icons .object-social { width: 82px; top: 68%; left: -8px; }
-  .home-page .hero-icons .object-shopping { width: 82px; top: 71%; left: auto; right: -6px; --icon-rotate: 5deg; }
+  .home-page .hero-icons .object-campaign { width: 158px; top: 5%; left: -46px; }
+  .home-page .hero-icons .object-search { width: 158px; top: 6%; right: -46px; }
+  .home-page .hero-icons .object-target { width: 86px; top: 25%; left: 3vw; }
+  .home-page .hero-icons .object-profile { width: 90px; top: 28%; right: 3vw; }
+  .home-page .hero-icons .object-social { width: 94px; top: 68%; left: -16px; }
+  .home-page .hero-icons .object-shopping { width: 94px; top: 71%; left: auto; right: -14px; --icon-rotate: 5deg; }
   .home-page .hero-icons .object-analytics,
   .home-page .hero-icons .object-lightbulb { display: none; }
 }
@@ -1613,10 +1613,10 @@ button:focus-visible,
     padding: 15px 18px;
   }
 
-  .home-page .hero-icons .object-campaign { width: 94px; top: 4%; left: -28px; }
-  .home-page .hero-icons .object-search { width: 94px; top: 5%; right: -28px; }
-  .home-page .hero-icons .object-target { width: 58px; top: 24%; left: -10px; }
-  .home-page .hero-icons .object-profile { width: 60px; top: 25%; right: -10px; }
-  .home-page .hero-icons .object-social { width: 64px; top: 78%; left: -12px; }
-  .home-page .hero-icons .object-shopping { width: 64px; top: 79%; right: -11px; }
+  .home-page .hero-icons .object-campaign { width: 118px; top: 3%; left: -39px; }
+  .home-page .hero-icons .object-search { width: 118px; top: 4%; right: -39px; }
+  .home-page .hero-icons .object-target { width: 70px; top: 22%; left: -18px; }
+  .home-page .hero-icons .object-profile { width: 72px; top: 23%; right: -18px; }
+  .home-page .hero-icons .object-social { width: 78px; top: 78%; left: -21px; }
+  .home-page .hero-icons .object-shopping { width: 78px; top: 79%; right: -20px; }
 }
