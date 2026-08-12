@@ -1095,6 +1095,7 @@ button:focus-visible,
 }
 
 .home-page .hero-cta {
+  position: relative;
   width: 252px;
   min-width: 252px;
   max-width: 252px;
@@ -1107,6 +1108,13 @@ button:focus-visible,
   color: #ffffff;
   border-color: var(--ref-ink);
   background: var(--ref-ink);
+}
+
+.home-page .hero-cta::after {
+  position: absolute;
+  right: 12px;
+  font-size: 1.05rem;
+  line-height: 1;
 }
 
 @media (max-width: 640px) {
