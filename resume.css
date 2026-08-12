@@ -1,5 +1,5 @@
 .nav a[aria-current="page"] {
-  border-bottom: 1px solid currentColor;
+  border-bottom: 2px solid currentColor;
 }
 
 .resume-hero {
@@ -26,8 +26,9 @@
 
 .resume-button {
   min-width: 210px;
-  padding: 17px 22px;
-  border: 1px solid #f5f2eb;
+  min-height: 52px;
+  padding: 14px 22px;
+  border: 1px solid var(--cloud);
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
@@ -39,29 +40,37 @@
   transition: background .2s ease, color .2s ease;
 }
 
+.resume-button::after {
+  content: "↗";
+}
+
+.resume-button[download]::after {
+  content: "↓";
+}
+
 .light-button {
-  color: #111;
-  background: #f5f2eb;
+  color: var(--ink);
+  background: var(--cloud);
 }
 
 .light-button:hover {
-  color: #f5f2eb;
-  background: transparent;
+  color: var(--cloud);
+  background: var(--ink);
 }
 
 .outline-button {
-  color: #f5f2eb;
+  color: var(--cloud);
   background: transparent;
 }
 
 .outline-button:hover {
-  color: #111;
-  background: #f5f2eb;
+  color: var(--ink);
+  background: var(--cloud);
 }
 
 .experience-section {
   padding: 120px 5vw 130px;
-  background: #fff;
+  background: var(--cloud);
 }
 
 .resume-section-heading {
@@ -82,7 +91,7 @@
 }
 
 .experience-list {
-  border-top: 1px solid #bbb7af;
+  border-top: 1px solid var(--steel);
 }
 
 .experience-item {
@@ -90,12 +99,12 @@
   grid-template-columns: 70px minmax(280px, .85fr) minmax(320px, 1.15fr);
   gap: 32px;
   padding: 42px 0 46px;
-  border-bottom: 1px solid #bbb7af;
+  border-bottom: 1px solid var(--steel);
 }
 
 .experience-number {
   padding-top: 4px;
-  color: #88847d;
+  color: var(--slate);
   font-size: .7rem;
   font-weight: 800;
   letter-spacing: .14em;
@@ -103,7 +112,7 @@
 
 .experience-title .experience-org {
   margin: 0 0 9px;
-  color: #66615a;
+  color: var(--slate);
   font-size: .72rem;
   font-weight: 800;
   letter-spacing: .11em;
@@ -121,7 +130,7 @@
 
 .experience-title .experience-date {
   margin: 16px 0 0;
-  color: #77716a;
+  color: var(--slate);
   font-size: .77rem;
   font-weight: 700;
   letter-spacing: .06em;
@@ -130,13 +139,13 @@
 
 .experience-copy p {
   margin: 0 0 20px;
-  color: #494949;
+  color: var(--slate);
   font-size: 1.05rem;
 }
 
 .experience-copy span,
 .education-focus {
-  color: #706b64;
+  color: var(--slate);
   font-family: Georgia, serif;
   font-size: .96rem;
   font-style: italic;
@@ -147,7 +156,7 @@
   grid-template-columns: .9fr 1.1fr;
   gap: 9vw;
   padding: 120px 5vw 130px;
-  background: #f4f1ea;
+  background: var(--mist);
 }
 
 .education-panel h2 {
@@ -163,15 +172,15 @@
   grid-template-columns: 145px 1fr;
   gap: 18px;
   padding: 14px 0;
-  border-top: 1px solid #c8c3ba;
+  border-top: 1px solid var(--steel);
 }
 
 .education-details > div:last-child {
-  border-bottom: 1px solid #c8c3ba;
+  border-bottom: 1px solid var(--steel);
 }
 
 .education-details dt {
-  color: #6d6861;
+  color: var(--slate);
   font-size: .68rem;
   font-weight: 800;
   letter-spacing: .08em;
@@ -180,7 +189,7 @@
 
 .education-details dd {
   margin: 0;
-  color: #3f3b37;
+  color: var(--ink);
   font-size: .96rem;
 }
 
@@ -203,11 +212,15 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.skill-list span {
+.skill-list li {
   padding: 12px 15px;
-  border: 1px solid #b8b3a9;
+  border: 1px solid var(--steel);
+  color: var(--ink);
   font-size: .69rem;
   font-weight: 800;
   letter-spacing: .08em;
@@ -216,7 +229,7 @@
 
 .compact-skill-group p {
   margin: 0;
-  color: #555049;
+  color: var(--slate);
 }
 
 .resume-download-section {
@@ -225,8 +238,8 @@
   gap: 8vw;
   align-items: end;
   padding: 120px 5vw;
-  color: #f5f2eb;
-  background: #121212;
+  color: var(--cloud);
+  background: var(--ink);
 }
 
 .resume-download-section h2 {
@@ -236,7 +249,7 @@
 .resume-download-copy > p {
   max-width: 580px;
   margin: 0;
-  color: #aaa;
+  color: var(--mist);
   font-size: 1.1rem;
 }
 
