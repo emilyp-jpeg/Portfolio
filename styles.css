@@ -316,32 +316,9 @@ button:focus-visible,
 .contact {
   position: relative;
   overflow: hidden;
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 90px;
+  padding-bottom: 90px;
   background: var(--mist);
-}
-
-.contact::before,
-.contact::after {
-  content: "";
-  position: absolute;
-  border: 1px solid var(--cloud);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.contact::before {
-  width: 520px;
-  height: 520px;
-  top: -260px;
-  right: -130px;
-}
-
-.contact::after {
-  width: 280px;
-  height: 280px;
-  bottom: -155px;
-  left: -95px;
 }
 
 .contact-heading,
@@ -352,14 +329,14 @@ button:focus-visible,
 
 .contact-heading {
   max-width: 1060px;
-  margin: 0 auto 70px;
+  margin: 0 auto 46px;
   text-align: center;
 }
 
 .contact h2 {
-  margin: 22px auto 28px;
+  margin: 18px auto 20px;
   max-width: 1050px;
-  font-size: clamp(3rem, 6.5vw, 6.5rem);
+  font-size: clamp(2.8rem, 5.4vw, 5.4rem);
   line-height: .92;
   letter-spacing: -.055em;
 }
@@ -390,7 +367,7 @@ button:focus-visible,
 }
 
 .contact-form {
-  padding: clamp(32px, 5vw, 62px);
+  padding: clamp(28px, 4vw, 46px);
   background: var(--cloud);
 }
 
@@ -401,7 +378,7 @@ button:focus-visible,
 }
 
 .form-field {
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
 
 .form-field label {
@@ -428,7 +405,7 @@ button:focus-visible,
 }
 
 .form-field textarea {
-  min-height: 128px;
+  min-height: 92px;
   resize: vertical;
 }
 
@@ -464,7 +441,7 @@ button:focus-visible,
 }
 
 .required-note {
-  margin: -12px 0 22px;
+  margin: -8px 0 16px;
   color: var(--slate);
   font-size: .75rem;
 }
@@ -502,13 +479,13 @@ button:focus-visible,
 }
 
 .contact-direct {
-  padding: clamp(32px, 5vw, 62px);
+  padding: clamp(28px, 4vw, 46px);
   color: var(--cloud);
   background: var(--navy);
 }
 
 .contact-direct h3 {
-  margin: 27px 0 18px;
+  margin: 22px 0 15px;
   font-family: Georgia, serif;
   font-size: clamp(2rem, 3vw, 3.1rem);
   font-weight: 400;
@@ -522,7 +499,7 @@ button:focus-visible,
 }
 
 .contact-links {
-  margin-top: 48px;
+  margin-top: 32px;
   border-top: 1px solid var(--steel);
 }
 
@@ -764,7 +741,7 @@ button:focus-visible,
   }
 
   .contact-heading {
-    margin-bottom: 48px;
+    margin-bottom: 36px;
   }
 
   .category-card {
@@ -819,7 +796,7 @@ button:focus-visible,
 
   .contact-form,
   .contact-direct {
-    padding: 36px 24px;
+    padding: 30px 24px;
   }
 }
 
