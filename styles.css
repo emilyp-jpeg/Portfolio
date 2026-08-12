@@ -1015,11 +1015,6 @@ button:focus-visible,
 /* Homepage — editorial Prismic-inspired palette and motion */
 .home-page {
   --ref-ink: #111111;
-  --ref-blue: #0047d8;
-  --ref-navy: #06145f;
-  --ref-peach: #ff8f70;
-  --ref-orange: #ffc06f;
-  --ref-lilac: #eadcff;
   --ref-paper: #fbfaf7;
   color: var(--ref-ink);
   background: var(--ref-paper);
@@ -1134,92 +1129,156 @@ button:focus-visible,
   will-change: transform, opacity;
 }
 
-.home-page .object-shell {
-  width: 180px;
-  height: 145px;
-  padding: 17px;
-  border: 2px solid var(--ref-ink);
-  border-radius: 18px;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  color: #ffffff;
-  background: var(--ref-blue);
-  box-shadow: 10px 12px 0 var(--ref-ink);
+.home-page .hero-object img {
+  display: block;
+  width: 100%;
+  height: auto;
   animation: object-arrive .8s cubic-bezier(.2, .8, .2, 1) both;
 }
 
-.home-page .hero-object svg {
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.home-page .object-label {
-  font-size: .58rem;
-  font-weight: 800;
-  letter-spacing: .15em;
-}
-
-.home-page .object-stat {
-  position: absolute;
-  right: 18px;
-  bottom: 14px;
-  font-size: .72rem;
-  font-weight: 800;
-  letter-spacing: .08em;
-}
-
 .home-page .object-campaign {
-  top: 19%;
-  left: 4vw;
+  width: clamp(180px, 16vw, 245px);
+  top: 23%;
+  left: -4.5vw;
   transform: translate(var(--hero-left-x, 0px), var(--hero-up-y, 0px)) rotate(-8deg);
 }
 
 .home-page .object-analytics {
-  top: 13%;
-  right: 5vw;
+  width: clamp(150px, 13vw, 196px);
+  top: 14%;
+  right: -2vw;
   transform: translate(var(--hero-right-x, 0px), var(--hero-up-y-small, 0px)) rotate(7deg);
 }
 
 .home-page .object-social {
-  left: 9vw;
-  bottom: 10%;
+  width: clamp(135px, 12vw, 178px);
+  left: -2vw;
+  bottom: 7%;
   transform: translate(var(--hero-left-x-small, 0px), var(--hero-down-y, 0px)) rotate(6deg);
 }
 
 .home-page .object-search {
-  right: 8vw;
-  bottom: 12%;
+  width: clamp(155px, 14vw, 205px);
+  right: -3vw;
+  bottom: 7%;
   transform: translate(var(--hero-right-x-small, 0px), var(--hero-down-y-small, 0px)) rotate(-5deg);
 }
 
-.home-page .object-social .object-shell,
-.home-page .object-search .object-shell {
-  width: 154px;
-  height: 134px;
+.home-page .object-target {
+  width: clamp(105px, 9vw, 140px);
+  top: 11%;
+  left: 22vw;
+  transform: translate(var(--hero-left-x-small, 0px), var(--hero-up-y-small, 0px)) rotate(-7deg);
 }
 
-.home-page .object-social .object-shell {
-  color: var(--ref-ink);
-  background: var(--ref-peach);
-  animation-delay: .18s;
+.home-page .object-lightbulb {
+  width: clamp(100px, 8vw, 128px);
+  top: 10%;
+  right: 24vw;
+  transform: translate(var(--hero-right-x-small, 0px), var(--hero-up-y, 0px)) rotate(6deg);
 }
 
-.home-page .object-analytics .object-shell {
-  color: var(--ref-ink);
-  background: var(--ref-orange);
-  animation-delay: .1s;
+.home-page .object-clapper {
+  width: clamp(110px, 9vw, 145px);
+  top: 46%;
+  left: 11vw;
+  transform: translate(var(--hero-left-x, 0px), var(--hero-up-y-small, 0px)) rotate(-6deg);
 }
 
-.home-page .object-search .object-shell {
-  color: var(--ref-navy);
-  background: var(--ref-lilac);
-  animation-delay: .27s;
+.home-page .object-hashtag {
+  width: clamp(92px, 7.5vw, 122px);
+  top: 44%;
+  right: 12vw;
+  transform: translate(var(--hero-right-x, 0px), var(--hero-up-y-small, 0px)) rotate(9deg);
 }
+
+.home-page .object-plane {
+  width: clamp(120px, 10vw, 160px);
+  left: 20vw;
+  bottom: -3%;
+  transform: translate(var(--hero-left-x-small, 0px), var(--hero-down-y, 0px)) rotate(8deg);
+}
+
+.home-page .object-shopping {
+  width: clamp(95px, 8vw, 130px);
+  right: 22vw;
+  bottom: -7%;
+  transform: translate(var(--hero-right-x-small, 0px), var(--hero-down-y, 0px)) rotate(-5deg);
+}
+
+.home-page .object-profile {
+  width: clamp(92px, 7vw, 112px);
+  top: 28%;
+  left: 15vw;
+  transform: translate(var(--hero-left-x-small, 0px), var(--hero-up-y-small, 0px)) rotate(6deg);
+}
+
+.home-page .object-engage {
+  width: clamp(105px, 8.5vw, 135px);
+  top: 29%;
+  right: 15vw;
+  transform: translate(var(--hero-right-x-small, 0px), var(--hero-up-y-small, 0px)) rotate(-5deg);
+}
+
+.home-page .object-email {
+  width: clamp(88px, 6.5vw, 105px);
+  top: 58%;
+  left: 4vw;
+  transform: translate(var(--hero-left-x, 0px), var(--hero-down-y-small, 0px)) rotate(-7deg);
+}
+
+.home-page .object-clipboard {
+  width: clamp(82px, 6vw, 98px);
+  top: 60%;
+  right: 5vw;
+  transform: translate(var(--hero-right-x, 0px), var(--hero-down-y-small, 0px)) rotate(6deg);
+}
+
+.home-page .object-pie {
+  width: clamp(75px, 5.5vw, 90px);
+  top: 7%;
+  left: 38vw;
+  transform: translate(var(--hero-left-x-small, 0px), var(--hero-up-y, 0px)) rotate(-4deg);
+}
+
+.home-page .object-message {
+  width: clamp(78px, 5.8vw, 94px);
+  top: 7%;
+  right: 38vw;
+  transform: translate(var(--hero-right-x-small, 0px), var(--hero-up-y, 0px)) rotate(5deg);
+}
+
+.home-page .object-notification {
+  width: clamp(98px, 7.5vw, 120px);
+  left: 34vw;
+  bottom: -4%;
+  transform: translate(var(--hero-left-x-small, 0px), var(--hero-down-y, 0px)) rotate(5deg);
+}
+
+.home-page .object-new {
+  width: clamp(92px, 7vw, 112px);
+  right: 34vw;
+  bottom: -3%;
+  transform: translate(var(--hero-right-x-small, 0px), var(--hero-down-y, 0px)) rotate(-6deg);
+}
+
+.home-page .object-analytics img { animation-delay: .1s; }
+.home-page .object-social img { animation-delay: .18s; }
+.home-page .object-search img { animation-delay: .27s; }
+.home-page .object-target img { animation-delay: .06s; }
+.home-page .object-lightbulb img { animation-delay: .14s; }
+.home-page .object-clapper img { animation-delay: .22s; }
+.home-page .object-hashtag img { animation-delay: .3s; }
+.home-page .object-plane img { animation-delay: .38s; }
+.home-page .object-shopping img { animation-delay: .46s; }
+.home-page .object-profile img { animation-delay: .11s; }
+.home-page .object-engage img { animation-delay: .19s; }
+.home-page .object-email img { animation-delay: .27s; }
+.home-page .object-clipboard img { animation-delay: .35s; }
+.home-page .object-pie img { animation-delay: .03s; }
+.home-page .object-message img { animation-delay: .08s; }
+.home-page .object-notification img { animation-delay: .42s; }
+.home-page .object-new img { animation-delay: .5s; }
 
 @keyframes object-arrive {
   from { opacity: 0; transform: translateY(28px) scale(.82) rotate(-4deg); }
@@ -1350,11 +1409,22 @@ button:focus-visible,
 
 @media (max-width: 900px) {
   .home-page .hero-message { width: min(620px, 72vw); }
-  .home-page .object-shell { width: 145px; height: 120px; }
   .home-page .object-campaign { left: 2vw; }
   .home-page .object-analytics { right: 2vw; }
   .home-page .object-social { left: 3vw; }
   .home-page .object-search { right: 3vw; }
+  .home-page .object-target { left: 18vw; }
+  .home-page .object-lightbulb { right: 18vw; }
+  .home-page .object-clapper { left: 4vw; }
+  .home-page .object-hashtag { right: 4vw; }
+  .home-page .object-plane { left: 16vw; }
+  .home-page .object-shopping { right: 16vw; }
+  .home-page .object-profile { left: 11vw; }
+  .home-page .object-engage { right: 11vw; }
+  .home-page .object-email { left: -1vw; }
+  .home-page .object-clipboard { right: -1vw; }
+  .home-page .object-pie { left: 36vw; }
+  .home-page .object-message { right: 36vw; }
 }
 
 @media (max-width: 640px) {
@@ -1363,18 +1433,32 @@ button:focus-visible,
   .home-page .hero-message { width: 88vw; top: 47%; }
   .home-page .hero-message h1 { font-size: clamp(4rem, 20vw, 5.7rem); }
   .home-page .hero-copy { max-width: 320px; margin-top: 26px; }
-  .home-page .object-shell,
-  .home-page .object-social .object-shell,
-  .home-page .object-search .object-shell { width: 106px; height: 91px; padding: 11px; border-radius: 12px; box-shadow: 6px 7px 0 var(--ref-ink); }
+  .home-page .hero-object { width: 112px; }
+  .home-page .object-analytics { width: 94px; }
+  .home-page .object-social { width: 98px; }
   .home-page .object-campaign { top: 14%; left: -30px; }
   .home-page .object-analytics { top: 17%; right: -30px; }
   .home-page .object-social { bottom: 14%; left: -28px; }
   .home-page .object-search { bottom: 14%; right: -28px; }
+  .home-page .object-target { width: 72px; top: 13%; left: 27vw; }
+  .home-page .object-lightbulb { width: 66px; top: 12%; right: 25vw; }
+  .home-page .object-clapper { width: 76px; top: 38%; left: -28px; }
+  .home-page .object-hashtag { width: 64px; top: 39%; right: -18px; }
+  .home-page .object-plane { width: 82px; left: 22vw; bottom: -2%; }
+  .home-page .object-shopping { width: 70px; right: 20vw; bottom: -5%; }
+  .home-page .object-profile,
+  .home-page .object-engage,
+  .home-page .object-email,
+  .home-page .object-clipboard,
+  .home-page .object-pie,
+  .home-page .object-message,
+  .home-page .object-notification,
+  .home-page .object-new { display: none; }
   .home-page .hero-scroll { right: 6vw; bottom: 18px; }
   .home-page .section-heading-row { align-items: flex-start; flex-direction: column; gap: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-page .object-shell { animation: none; }
+  .home-page .hero-object img { animation: none; }
   .home-page .hero-scroll { display: none; }
 }
