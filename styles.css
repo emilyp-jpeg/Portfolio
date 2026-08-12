@@ -1557,34 +1557,34 @@ button:focus-visible,
 
 /* Give the four-icon responsive row the same lively drift as desktop. */
 .home-page .mobile-hero-icon {
-  --mobile-drift-x: 20px;
-  --mobile-drift-y: -25px;
-  --mobile-drift-turn: 2.4deg;
-  --mobile-drift-time: 4.8s;
+  --mobile-drift-x: 5px;
+  --mobile-drift-y: -8px;
+  --mobile-drift-turn: .8deg;
+  --mobile-drift-time: 5.8s;
   --mobile-drift-delay: -1.4s;
 }
 
 .home-page .mobile-hero-icon:nth-child(2n) {
-  --mobile-drift-x: -23px;
-  --mobile-drift-y: 21px;
-  --mobile-drift-turn: -2.1deg;
-  --mobile-drift-time: 5.4s;
+  --mobile-drift-x: -5px;
+  --mobile-drift-y: 7px;
+  --mobile-drift-turn: -.7deg;
+  --mobile-drift-time: 6.4s;
   --mobile-drift-delay: -4.1s;
 }
 
 .home-page .mobile-hero-icon:nth-child(3n) {
-  --mobile-drift-x: 26px;
-  --mobile-drift-y: 18px;
-  --mobile-drift-turn: 2.7deg;
-  --mobile-drift-time: 5.9s;
+  --mobile-drift-x: 6px;
+  --mobile-drift-y: 6px;
+  --mobile-drift-turn: .9deg;
+  --mobile-drift-time: 6.8s;
   --mobile-drift-delay: -6.3s;
 }
 
 .home-page .mobile-hero-icon:nth-child(4n) {
-  --mobile-drift-x: -19px;
-  --mobile-drift-y: -24px;
-  --mobile-drift-turn: -2.5deg;
-  --mobile-drift-time: 5.1s;
+  --mobile-drift-x: -4px;
+  --mobile-drift-y: -8px;
+  --mobile-drift-turn: -.8deg;
+  --mobile-drift-time: 6.1s;
   --mobile-drift-delay: -2.8s;
 }
 
