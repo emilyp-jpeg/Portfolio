@@ -1961,3 +1961,26 @@ button:focus-visible,
     width: clamp(60px, 19vw, 76px);
   }
 }
+
+/* Keep the desktop clusters pinned outward while a desktop window narrows. */
+@media (min-width: 981px) and (max-width: 1180px) {
+  .home-page .icon-wing {
+    width: 550px;
+  }
+
+  .home-page .wing-left {
+    left: -150px;
+  }
+
+  .home-page .wing-right {
+    right: -150px;
+  }
+
+  .home-page .hero-message {
+    width: min(620px, 54vw);
+  }
+
+  .home-page .icon-wings .icon-wing .hero-object {
+    --drift-x: 0px !important;
+  }
+}
