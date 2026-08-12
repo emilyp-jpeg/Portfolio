@@ -1716,7 +1716,7 @@ button:focus-visible,
 }
 
 .home-page .hero-message {
-  width: min(700px, 48vw);
+  width: min(680px, 48vw);
   top: 50%;
   transform: translate(-50%, -50%);
   opacity: 1;
@@ -1731,8 +1731,8 @@ button:focus-visible,
 }
 
 .home-page .icon-wing {
-  width: min(31vw, 460px);
-  height: 560px;
+  width: min(36vw, 550px);
+  height: 610px;
   position: absolute;
   top: 50%;
   bottom: auto;
@@ -1751,29 +1751,32 @@ button:focus-visible,
   filter: drop-shadow(6px 8px 0 rgba(17, 17, 17, .1));
 }
 
-.home-page .icon-wings .hero-object img {
+.home-page .hero-icons.icon-wings .hero-object img {
   width: 100%;
   height: auto;
-  animation: wing-arrive .72s cubic-bezier(.2, .8, .2, 1) both;
+  animation: none;
 }
 
-.home-page .wing-left .object-campaign { width: 140px; top: 42px; left: -28px; --wing-rotate: -7deg; }
-.home-page .wing-left .object-target { width: 88px; top: 7px; left: 170px; --wing-rotate: 6deg; }
-.home-page .wing-left .object-lightbulb { width: 62px; top: 172px; left: 116px; --wing-rotate: -5deg; }
-.home-page .wing-left .object-analytics { width: 96px; top: 222px; left: -42px; --wing-rotate: -6deg; }
-.home-page .wing-left .object-social { width: 70px; top: 292px; left: 132px; --wing-rotate: 7deg; }
-.home-page .wing-left .object-shopping { width: 76px; top: 382px; left: 178px; --wing-rotate: -5deg; }
+.home-page .wing-left .object-campaign { width: 190px; top: 88px; left: -50px; --wing-rotate: -7deg; }
+.home-page .wing-left .object-target { width: 105px; top: 18px; left: 210px; --wing-rotate: 6deg; }
+.home-page .wing-left .object-lightbulb { width: 82px; top: 174px; left: 164px; --wing-rotate: -5deg; }
+.home-page .wing-left .object-analytics { width: 138px; top: 258px; left: -42px; --wing-rotate: -6deg; }
+.home-page .wing-left .object-social { width: 98px; top: 344px; left: 125px; --wing-rotate: 7deg; }
+.home-page .wing-left .object-shopping { width: 106px; top: 443px; left: 237px; --wing-rotate: -5deg; }
+.home-page .wing-left .object-accent-hashtag { width: 62px; top: -30px; left: 30px; --wing-rotate: -7deg; }
+.home-page .wing-left .object-accent-plane { width: 76px; top: 132px; left: 302px; --wing-rotate: 8deg; }
+.home-page .wing-left .object-accent-target { width: 66px; top: 315px; left: 280px; --wing-rotate: -5deg; }
+.home-page .wing-left .object-accent-camera { width: 78px; top: 488px; left: -5px; --wing-rotate: 7deg; }
 
-.home-page .wing-right .object-search { width: 126px; top: 17px; right: -33px; --wing-rotate: 7deg; }
-.home-page .wing-right .object-profile { width: 88px; top: 62px; right: 172px; --wing-rotate: -5deg; }
-.home-page .wing-right .object-hashtag { width: 72px; top: -53px; right: 54px; --wing-rotate: 5deg; }
-.home-page .wing-right .object-clapper { width: 80px; top: 217px; right: 182px; --wing-rotate: 5deg; }
-.home-page .wing-right .object-plane { width: 90px; top: 342px; right: -7px; --wing-rotate: -8deg; }
-
-@keyframes wing-arrive {
-  from { opacity: 0; transform: translateY(18px) scale(.86); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
-}
+.home-page .wing-right .object-search { width: 178px; top: 75px; right: -52px; --wing-rotate: 7deg; }
+.home-page .wing-right .object-profile { width: 112px; top: 151px; right: 208px; --wing-rotate: -5deg; }
+.home-page .wing-right .object-hashtag { width: 90px; top: -27px; right: 92px; --wing-rotate: 5deg; }
+.home-page .wing-right .object-clapper { width: 108px; top: 293px; right: 222px; --wing-rotate: 5deg; }
+.home-page .wing-right .object-plane { width: 126px; top: 417px; right: -17px; --wing-rotate: -8deg; }
+.home-page .wing-right .object-accent-lightbulb { width: 76px; top: 37px; right: 280px; --wing-rotate: 6deg; }
+.home-page .wing-right .object-accent-social { width: 78px; top: 248px; right: 73px; --wing-rotate: -6deg; }
+.home-page .wing-right .object-accent-target { width: 72px; top: 438px; right: 270px; --wing-rotate: 5deg; }
+.home-page .wing-right .object-accent-shopping { width: 84px; top: 505px; right: 112px; --wing-rotate: -6deg; }
 
 @media (max-width: 980px) {
   .home-page .hero-message { width: 58vw; }
@@ -1844,6 +1847,7 @@ button:focus-visible,
   .home-page .wing-left .object-analytics { width: 70px; top: 42px; left: 60vw; }
   .home-page .wing-left .object-social { width: 55px; top: 6px; left: 82vw; }
   .home-page .wing-left .object-shopping { display: none; }
+  .home-page .icon-wings [class*="object-accent-"] { display: none; }
 
   .home-page .wing-right .object-search { width: 82px; top: 33px; right: -21px; }
   .home-page .wing-right .object-profile { width: 56px; top: 3px; right: 21vw; }
@@ -1854,4 +1858,8 @@ button:focus-visible,
 
 @media (prefers-reduced-motion: reduce) {
   .home-page .icon-wings .hero-object img { animation: none; }
+}
+
+.home-page .hero-icons.icon-wings .hero-object img {
+  animation: none !important;
 }
