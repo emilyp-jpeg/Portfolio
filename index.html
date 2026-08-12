@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Emily Polcaro — marketing, brand, digital and creative portfolio." />
   <title>Emily Polcaro | Marketing, Brand & Creative</title>
-  <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body><a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
@@ -17,7 +17,59 @@
 <section id="about" class="intro section-pad"><div class="section-kicker">ABOUT ME</div><div class="intro-grid"><h2>Strategy in one hand.<br>Creativity in the other.</h2><div><p>I’m a Bentley University student focused on marketing, brand development and creative work. My experience spans digital marketing, web content, social media, photography, branding and e-commerce.</p><p>I like projects that start with a problem, move through strategy, and end with something people can actually see, use or experience.</p></div></div></section>
 <section id="portfolio" class="portfolio section-pad"><div class="portfolio-heading"><p class="section-kicker">PORTFOLIO</p><h2>Explore my work.</h2><p>My work spans strategy, digital experiences and visual storytelling. Choose a category to explore selected projects.</p></div><div class="category-grid"><a href="brand-strategy.html" class="category-card brand-card"><div class="category-overlay"><p>01</p><h3>Brand + Strategy</h3><span>Brand development · Research · Business development</span></div></a><a href="digital-marketing.html" class="category-card digital-card"><div class="category-overlay"><p>02</p><h3>Digital Marketing + Web</h3><span>Web · SEO · UX · E-Commerce</span></div></a><a href="creative-content.html" class="category-card creative-card"><div class="category-overlay"><p>03</p><h3>Creative + Content</h3><span>Photography · UGC · Social · Editorial</span></div></a></div></section>
 <section class="skills-banner"><div>BRAND STRATEGY</div><div>DIGITAL MARKETING</div><div>PHOTOGRAPHY</div><div>CONTENT</div><div>SEO</div><div>CREATIVE DIRECTION</div></section>
-<section id="contact" class="contact section-pad dark-section"><p class="section-kicker light">LET'S CONNECT</p><h2>Have an opportunity in mind?</h2><p class="contact-copy">I’m currently interested in marketing, brand, digital and creative internship opportunities.</p><div class="contact-links"><a href="mailto:epolcaro@falcon.bentley.edu">EMAIL →</a><a href="https://www.linkedin.com/in/emily-polcaro" target="_blank" rel="noopener">LINKEDIN →<span class="sr-only"> (opens in a new tab)</span></a><a href="resume.html">RESUME →</a></div></section>
+<section id="contact" class="contact section-pad">
+  <div class="contact-heading">
+    <p class="section-kicker">GET IN TOUCH</p>
+    <h2>Open to new opportunities<br> and collaborations.</h2>
+    <p class="contact-copy">Have a role, project or creative idea in mind? Send me a note and I’ll get back to you.</p>
+    <p id="contact-success" class="contact-success" role="status" hidden>Thanks for reaching out. Your message has been sent.</p>
+  </div>
+
+  <div class="contact-grid">
+    <form class="contact-form" action="https://formsubmit.co/epolcaro@falcon.bentley.edu" method="POST" accept-charset="UTF-8">
+      <input type="hidden" name="_subject" value="New portfolio inquiry" />
+      <input type="hidden" name="_next" value="https://emilyp-jpeg.github.io/Portfolio/?message=sent#contact" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="first-name">First name <span aria-hidden="true">*</span></label>
+          <input id="first-name" name="First name" type="text" autocomplete="given-name" required />
+        </div>
+        <div class="form-field">
+          <label for="last-name">Last name <span aria-hidden="true">*</span></label>
+          <input id="last-name" name="Last name" type="text" autocomplete="family-name" required />
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email <span aria-hidden="true">*</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required />
+      </div>
+
+      <div class="form-field">
+        <label for="message">Message <span aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <p class="required-note"><span aria-hidden="true">*</span> Required fields</p>
+      <button class="contact-submit" type="submit">Send message</button>
+    </form>
+
+    <aside class="contact-direct" aria-labelledby="direct-contact-heading">
+      <p class="section-kicker light">OTHER WAYS TO CONNECT</p>
+      <h3 id="direct-contact-heading">Prefer to reach out directly?</h3>
+      <p>Email me, connect on LinkedIn or take a closer look at my experience.</p>
+      <div class="contact-links">
+        <a href="mailto:epolcaro@falcon.bentley.edu"><span>Email</span></a>
+        <a class="external-link" href="https://www.linkedin.com/in/emily-polcaro" target="_blank" rel="noopener"><span>LinkedIn<span class="sr-only"> (opens in a new tab)</span></span></a>
+        <a href="resume.html"><span>Resume + Experience</span></a>
+      </div>
+    </aside>
+  </div>
+</section>
 </main>
 <footer class="footer"><span>© <span id="year"></span> Emily Polcaro</span><span>Marketing · Brand · Creative</span></footer><script src="script.js"></script>
 </body></html>
