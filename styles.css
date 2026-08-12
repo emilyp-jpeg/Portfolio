@@ -1501,6 +1501,206 @@ button:focus-visible,
   }
 }
 
+/* Icon Runway hero */
+.home-page .hero {
+  height: 142vh;
+}
+
+.home-page .hero-message {
+  width: min(780px, 70vw);
+  top: 49%;
+  z-index: 5;
+}
+
+.home-page .icon-runway {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  overflow: hidden;
+  opacity: var(--runway-opacity, 1);
+  transform: translateY(var(--runway-scroll-y, 0px));
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.home-page .runway-lane {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-page .runway-top {
+  top: -2.5%;
+  height: 150px;
+}
+
+.home-page .runway-bottom {
+  bottom: -4.5%;
+  height: 165px;
+}
+
+.home-page .runway-track {
+  width: max-content;
+  display: flex;
+  animation: runway-forward 28s linear infinite;
+  will-change: transform;
+}
+
+.home-page .runway-bottom .runway-track {
+  animation-name: runway-reverse;
+  animation-duration: 31s;
+}
+
+.home-page .runway-set {
+  flex: 0 0 auto;
+  min-width: max(100vw, 1130px);
+  padding: 0 clamp(28px, 4vw, 70px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: clamp(54px, 7vw, 118px);
+}
+
+.home-page .icon-runway .hero-object {
+  position: relative;
+  inset: auto;
+  display: block;
+  flex: 0 0 auto;
+  opacity: 1;
+  transform: none;
+  filter: drop-shadow(7px 9px 0 rgba(17, 17, 17, .1));
+}
+
+.home-page .icon-runway .hero-object img {
+  width: 100%;
+  height: auto;
+  animation: runway-icon-arrive .72s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.home-page .icon-runway .object-campaign,
+.home-page .icon-runway .object-search { width: 124px; }
+.home-page .icon-runway .object-target { width: 78px; }
+.home-page .icon-runway .object-profile { width: 84px; }
+.home-page .icon-runway .object-lightbulb { width: 72px; }
+.home-page .icon-runway .object-hashtag { width: 68px; }
+.home-page .icon-runway .object-social { width: 78px; }
+.home-page .icon-runway .object-analytics { width: 104px; }
+.home-page .icon-runway .object-clapper { width: 84px; }
+.home-page .icon-runway .object-plane { width: 94px; }
+.home-page .icon-runway .object-shopping { width: 82px; }
+
+.home-page .runway-top .hero-object:nth-child(even) { transform: translateY(18px) rotate(4deg); }
+.home-page .runway-top .hero-object:nth-child(odd) { transform: translateY(-2px) rotate(-3deg); }
+.home-page .runway-bottom .hero-object:nth-child(even) { transform: translateY(-15px) rotate(-4deg); }
+.home-page .runway-bottom .hero-object:nth-child(odd) { transform: translateY(13px) rotate(4deg); }
+
+@keyframes runway-forward {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes runway-reverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes runway-icon-arrive {
+  from { opacity: 0; transform: translateY(18px) scale(.85); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 900px) {
+  .home-page .hero-message { width: 82vw; }
+  .home-page .runway-top { top: -1%; height: 150px; }
+  .home-page .runway-bottom { bottom: -2%; height: 162px; }
+  .home-page .runway-set { min-width: 900px; gap: 60px; padding-inline: 34px; }
+  .home-page .icon-runway .object-campaign,
+  .home-page .icon-runway .object-search { width: 126px; }
+  .home-page .icon-runway .object-target { width: 78px; }
+  .home-page .icon-runway .object-profile { width: 84px; }
+  .home-page .icon-runway .object-lightbulb { width: 72px; }
+  .home-page .icon-runway .object-hashtag { width: 68px; }
+  .home-page .icon-runway .object-social { width: 78px; }
+  .home-page .icon-runway .object-analytics { width: 106px; }
+  .home-page .icon-runway .object-clapper { width: 84px; }
+  .home-page .icon-runway .object-plane { width: 94px; }
+  .home-page .icon-runway .object-shopping { width: 82px; }
+}
+
+@media (max-width: 640px) {
+  .home-page .hero {
+    height: 112svh;
+    min-height: 760px;
+  }
+
+  .home-page .hero-sticky {
+    height: 100svh;
+    min-height: 710px;
+    top: 0;
+  }
+
+  .home-page .hero-message {
+    width: 90vw;
+    top: 50%;
+  }
+
+  .home-page .hero-message h1 {
+    font-size: clamp(4.15rem, 20vw, 5.25rem);
+  }
+
+  .home-page .hero-eyebrow {
+    width: 76vw;
+    margin-inline: auto;
+    font-size: .62rem;
+    line-height: 1.5;
+  }
+
+  .home-page .hero-copy {
+    max-width: 300px;
+    margin: 24px auto 21px;
+    font-size: .96rem;
+    line-height: 1.45;
+  }
+
+  .home-page .runway-top {
+    top: -1%;
+    height: 132px;
+  }
+
+  .home-page .runway-bottom {
+    bottom: -2%;
+    height: 142px;
+  }
+
+  .home-page .runway-track { animation-duration: 34s; }
+  .home-page .runway-bottom .runway-track { animation-duration: 38s; }
+  .home-page .runway-set { min-width: 780px; gap: 44px; padding-inline: 24px; }
+  .home-page .icon-runway .object-campaign,
+  .home-page .icon-runway .object-search { width: 108px; }
+  .home-page .icon-runway .object-target { width: 66px; }
+  .home-page .icon-runway .object-profile { width: 70px; }
+  .home-page .icon-runway .object-lightbulb { width: 62px; }
+  .home-page .icon-runway .object-hashtag { width: 58px; }
+  .home-page .icon-runway .object-social { width: 68px; }
+  .home-page .icon-runway .object-analytics { width: 88px; }
+  .home-page .icon-runway .object-clapper { width: 72px; }
+  .home-page .icon-runway .object-plane { width: 82px; }
+  .home-page .icon-runway .object-shopping { width: 70px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .icon-runway {
+    opacity: 1;
+    transform: none;
+  }
+
+  .home-page .icon-runway .runway-track,
+  .home-page .icon-runway .hero-object img {
+    animation: none;
+  }
+}
+
 /* Responsive hero composition: 8 desktop, 6 tablet, 6 mobile */
 .home-page .hero-message {
   width: min(760px, 58vw);

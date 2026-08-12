@@ -12,7 +12,6 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 if (kineticHero && !reducedMotion.matches) {
   let kineticFrame = null;
-  const heroObjects = kineticHero.querySelectorAll(".hero-object");
 
   const clamp = (value) => Math.min(1, Math.max(0, value));
 
@@ -20,26 +19,11 @@ if (kineticHero && !reducedMotion.matches) {
     const rect = kineticHero.getBoundingClientRect();
     const travel = Math.max(1, kineticHero.offsetHeight - window.innerHeight);
     const progress = clamp(-rect.top / travel);
-    const horizontal = Math.min(window.innerWidth * .28, 360);
+    kineticHero.style.setProperty("--runway-scroll-y", `${progress * 22}px`);
+    kineticHero.style.setProperty("--runway-opacity", `${Math.max(0, 1 - progress * 1.35)}`);
 
-    heroObjects.forEach((object) => {
-      const isInner = object.dataset.depth === "inner";
-      const rawObjectProgress = isInner
-        ? clamp(progress / .62)
-        : clamp((progress - .08) / .74);
-      const objectProgress = rawObjectProgress * rawObjectProgress * (3 - 2 * rawObjectProgress);
-      const isPlacedLeft = object.offsetLeft + object.offsetWidth / 2 < kineticHero.offsetWidth / 2;
-      const sideDirection = isPlacedLeft ? -1 : 1;
-      const verticalDirection = Number(object.dataset.y || 0);
-      const distance = horizontal * (isInner ? .68 : .9);
-
-      object.style.setProperty("--icon-shift-x", `${sideDirection * objectProgress * distance}px`);
-      object.style.setProperty("--icon-shift-y", `${verticalDirection * objectProgress * (isInner ? 18 : 28)}px`);
-      object.style.setProperty("--icon-opacity", `${Math.max(0, 1 - objectProgress * 1.12)}`);
-    });
-
-    kineticHero.style.setProperty("--hero-copy-y", `${-progress * 32}px`);
-    kineticHero.style.setProperty("--hero-copy-opacity", `${Math.max(.68, 1 - progress * .32)}`);
+    kineticHero.style.setProperty("--hero-copy-y", `${-progress * 18}px`);
+    kineticHero.style.setProperty("--hero-copy-opacity", `${Math.max(.78, 1 - progress * .22)}`);
     kineticFrame = null;
   };
 
