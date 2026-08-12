@@ -1525,6 +1525,36 @@ button:focus-visible,
   }
 }
 
+/* Remove the remaining vertical gap in narrow desktop/tablet windows. */
+@media (min-width: 641px) and (max-width: 980px) {
+  .home-page .hero {
+    min-height: 520px;
+  }
+
+  .home-page .hero-sticky {
+    height: 520px;
+    min-height: 520px;
+    padding-block: 18px;
+  }
+
+  .home-page .mobile-hero-icons {
+    top: 18px;
+  }
+
+  .home-page .hero-message {
+    top: 126px;
+  }
+
+  .home-page .hero-eyebrow {
+    margin-bottom: 15px;
+  }
+
+  .home-page .hero-copy {
+    margin-top: 21px;
+    margin-bottom: 19px;
+  }
+}
+
 /* Icon Runway hero */
 .home-page .hero {
   height: 142vh;
@@ -2090,5 +2120,25 @@ button:focus-visible,
   .home-page .hero-copy {
     margin-top: 18px;
     margin-bottom: 17px;
+  }
+}
+
+/* Final condensed override: keep the row and copy together at tablet widths. */
+@media (min-width: 641px) and (max-width: 980px) {
+  .home-page .hero { min-height: 520px; }
+
+  .home-page .hero-sticky {
+    height: 520px;
+    min-height: 520px;
+    padding-block: 18px;
+  }
+
+  .home-page .mobile-hero-icons { top: 18px; }
+  .home-page .hero-message { top: 126px; }
+  .home-page .hero-eyebrow { margin-bottom: 15px; }
+
+  .home-page .hero-copy {
+    margin-top: 21px;
+    margin-bottom: 19px;
   }
 }
