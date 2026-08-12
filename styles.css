@@ -1095,10 +1095,26 @@ button:focus-visible,
 }
 
 .home-page .hero-cta {
-  min-width: 236px;
+  width: 252px;
+  min-width: 252px;
+  max-width: 252px;
+  height: 54px;
+  min-height: 54px;
+  padding: 0 22px;
+  border-radius: 999px;
+  flex: 0 0 252px;
+  white-space: nowrap;
   color: #ffffff;
   border-color: var(--ref-ink);
   background: var(--ref-ink);
+}
+
+@media (max-width: 640px) {
+  .home-page .hero-cta {
+    width: 252px;
+    min-width: 252px;
+    max-width: 252px;
+  }
 }
 
 .home-page .hero-cta:hover {
