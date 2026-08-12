@@ -24,9 +24,10 @@ if (kineticHero && !reducedMotion.matches) {
 
     heroObjects.forEach((object) => {
       const isInner = object.dataset.depth === "inner";
-      const objectProgress = isInner
-        ? clamp(progress / .62)
-        : clamp((progress - .1) / .74);
+      const rawObjectProgress = isInner
+        ? clamp((progress - .01) / .57)
+        : clamp((progress - .11) / .67);
+      const objectProgress = rawObjectProgress * rawObjectProgress * (3 - 2 * rawObjectProgress);
       const sideDirection = object.dataset.side === "left" ? -1 : 1;
       const verticalDirection = Number(object.dataset.y || 0);
       const distance = horizontal * (isInner ? .74 : 1);
