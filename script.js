@@ -17,16 +17,19 @@ if (kineticHero && !reducedMotion.matches) {
     const rect = kineticHero.getBoundingClientRect();
     const travel = Math.max(1, kineticHero.offsetHeight - window.innerHeight);
     const progress = Math.min(1, Math.max(0, -rect.top / travel));
-    const horizontal = Math.min(window.innerWidth * .12, 170);
+    const horizontal = Math.min(window.innerWidth * .26, 390);
 
-    kineticHero.style.setProperty("--kinetic-x-one", `${-progress * horizontal}px`);
-    kineticHero.style.setProperty("--kinetic-y-one", `${-52 - progress * 38}px`);
-    kineticHero.style.setProperty("--kinetic-x-two", `${progress * horizontal * .58}px`);
-    kineticHero.style.setProperty("--kinetic-y-two", `${-20 - progress * 14}px`);
-    kineticHero.style.setProperty("--kinetic-x-three", `${-progress * horizontal * .35}px`);
-    kineticHero.style.setProperty("--kinetic-y-three", `${14 + progress * 14}px`);
-    kineticHero.style.setProperty("--kinetic-x-four", `${progress * horizontal * .82}px`);
-    kineticHero.style.setProperty("--kinetic-y-four", `${48 + progress * 38}px`);
+    kineticHero.style.setProperty("--hero-left-x", `${-progress * horizontal}px`);
+    kineticHero.style.setProperty("--hero-left-x-small", `${-progress * horizontal * .8}px`);
+    kineticHero.style.setProperty("--hero-right-x", `${progress * horizontal}px`);
+    kineticHero.style.setProperty("--hero-right-x-small", `${progress * horizontal * .85}px`);
+    kineticHero.style.setProperty("--hero-up-y", `${-progress * 95}px`);
+    kineticHero.style.setProperty("--hero-up-y-small", `${-progress * 52}px`);
+    kineticHero.style.setProperty("--hero-down-y", `${progress * 95}px`);
+    kineticHero.style.setProperty("--hero-down-y-small", `${progress * 76}px`);
+    kineticHero.style.setProperty("--hero-object-opacity", `${Math.max(0, 1 - progress * 1.45)}`);
+    kineticHero.style.setProperty("--hero-copy-y", `${-progress * 32}px`);
+    kineticHero.style.setProperty("--hero-copy-opacity", `${Math.max(.68, 1 - progress * .32)}`);
     kineticFrame = null;
   };
 
