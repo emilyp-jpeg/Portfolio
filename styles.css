@@ -2008,3 +2008,33 @@ button:focus-visible,
     --drift-x: 0px !important;
   }
 }
+
+/* Stagger the decorative icons into view before their ambient drift begins. */
+.home-page .hero-icons.icon-wings .hero-object,
+.home-page .mobile-hero-icons .mobile-hero-icon {
+  opacity: 0;
+  scale: .76;
+  transition: opacity .58s ease, scale .72s cubic-bezier(.2, .8, .2, 1);
+}
+
+.home-page.hero-icons-ready .hero-icons.icon-wings .hero-object,
+.home-page.hero-icons-ready .mobile-hero-icons .mobile-hero-icon {
+  opacity: 1;
+  scale: 1;
+}
+
+.home-page .hero-icons.icon-wings .hero-object:nth-child(2n),
+.home-page .mobile-hero-icons .mobile-hero-icon:nth-child(2n) { transition-delay: .09s; }
+.home-page .hero-icons.icon-wings .hero-object:nth-child(3n),
+.home-page .mobile-hero-icons .mobile-hero-icon:nth-child(3n) { transition-delay: .18s; }
+.home-page .hero-icons.icon-wings .hero-object:nth-child(4n),
+.home-page .mobile-hero-icons .mobile-hero-icon:nth-child(4n) { transition-delay: .27s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .hero-icons.icon-wings .hero-object,
+  .home-page .mobile-hero-icons .mobile-hero-icon {
+    opacity: 1;
+    scale: 1;
+    transition: none;
+  }
+}
