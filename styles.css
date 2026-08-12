@@ -1907,3 +1907,57 @@ button:focus-visible,
     animation: none !important;
   }
 }
+
+/* Compact hero treatment for resized windows and mobile screens. */
+.home-page .mobile-hero-icons {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .home-page .hero-icons.icon-wings {
+    display: none;
+  }
+
+  .home-page .mobile-hero-icons {
+    position: absolute;
+    z-index: 4;
+    top: clamp(30px, 7vh, 64px);
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(10px, 2.4vw, 20px);
+    width: min(88vw, 440px);
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .home-page .mobile-hero-icon {
+    display: grid;
+    flex: 0 0 clamp(62px, 12vw, 84px);
+    width: clamp(62px, 12vw, 84px);
+    aspect-ratio: 1;
+    place-items: center;
+  }
+
+  .home-page .mobile-hero-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(4px 5px 0 rgba(17, 17, 17, .1));
+  }
+}
+
+@media (max-width: 640px) {
+  .home-page .mobile-hero-icons {
+    top: 28px;
+    gap: clamp(7px, 2.4vw, 12px);
+    width: 94vw;
+  }
+
+  .home-page .mobile-hero-icon {
+    flex-basis: clamp(60px, 19vw, 76px);
+    width: clamp(60px, 19vw, 76px);
+  }
+}
