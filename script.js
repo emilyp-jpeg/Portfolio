@@ -20,19 +20,21 @@ if (kineticHero && !reducedMotion.matches) {
     const rect = kineticHero.getBoundingClientRect();
     const travel = Math.max(1, kineticHero.offsetHeight - window.innerHeight);
     const progress = clamp(-rect.top / travel);
-    const horizontal = Math.min(window.innerWidth * .26, 390);
+    const horizontal = Math.min(window.innerWidth * .28, 360);
 
     heroObjects.forEach((object) => {
       const isInner = object.dataset.depth === "inner";
-      const objectProgress = isInner
+      const rawObjectProgress = isInner
         ? clamp(progress / .62)
-        : clamp((progress - .1) / .74);
-      const sideDirection = object.dataset.side === "left" ? -1 : 1;
+        : clamp((progress - .08) / .74);
+      const objectProgress = rawObjectProgress * rawObjectProgress * (3 - 2 * rawObjectProgress);
+      const isPlacedLeft = object.offsetLeft + object.offsetWidth / 2 < kineticHero.offsetWidth / 2;
+      const sideDirection = isPlacedLeft ? -1 : 1;
       const verticalDirection = Number(object.dataset.y || 0);
-      const distance = horizontal * (isInner ? .74 : 1);
+      const distance = horizontal * (isInner ? .68 : .9);
 
       object.style.setProperty("--icon-shift-x", `${sideDirection * objectProgress * distance}px`);
-      object.style.setProperty("--icon-shift-y", `${verticalDirection * objectProgress * (isInner ? 48 : 68)}px`);
+      object.style.setProperty("--icon-shift-y", `${verticalDirection * objectProgress * (isInner ? 18 : 28)}px`);
       object.style.setProperty("--icon-opacity", `${Math.max(0, 1 - objectProgress * 1.12)}`);
     });
 
