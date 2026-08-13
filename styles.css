@@ -1094,6 +1094,10 @@ button:focus-visible,
   font-size: clamp(1rem, 1.3vw, 1.18rem);
 }
 
+.home-page .hero-copy span {
+  display: block;
+}
+
 .home-page .hero-cta {
   position: relative;
   width: 252px;
